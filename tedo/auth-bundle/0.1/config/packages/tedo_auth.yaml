@@ -1,0 +1,22 @@
+tedo_auth:
+    user_entity: ~ # required: UserEntityClass
+
+    hwi: # this subtree will be validated by hwi_oauth
+        firewall_names: [ main ]
+
+        resource_owners:
+            customer:
+                base_url:      '%tedo_auth.customer_keycloak_url%'
+                client_id:     client
+                client_secret: '%env(resolve:CUSTOMER_CLIENT_SECRET)%'
+                scope:         'email profile' # diese sind die default
+                options:
+                    csrf: true
+
+            staff:
+                realm:         tedo-verlag
+                base_url:      '%tedo_auth.staff_keycloak_url%'
+                client_id:     client
+                client_secret: '%env(resolve:STAFF_CLIENT_SECRET)%'
+                options:
+                    csrf: true

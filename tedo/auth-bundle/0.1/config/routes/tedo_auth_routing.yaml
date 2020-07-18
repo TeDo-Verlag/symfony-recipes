@@ -1,0 +1,2 @@
+tedo_auth_bundle:
+    resource: '@TedoAuthBundle/config/routes.yaml'

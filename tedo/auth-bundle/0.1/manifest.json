@@ -1,0 +1,12 @@
+{
+  "bundles": {
+    "Tedo\\AuthBundle\\TedoAuthBundle": ["all"]
+  },
+  "copy-from-recipe": {
+    "config/": "%CONFIG_DIR%/"
+  },
+  "env": {
+    "FB_ID": "",
+    "FB_SECRET": ""
+  }
+}
